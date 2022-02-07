@@ -1,0 +1,12 @@
+git add .
+git commit -m "second commit"
+git pull origin main
+git push origin main
+
+Ctrl + / 전체 주석
+
+문자열 str
+정수 int
+소숫점 float
+반올림 round - print(round(2.66)) =3
+반버림 //    - print(8//3)
