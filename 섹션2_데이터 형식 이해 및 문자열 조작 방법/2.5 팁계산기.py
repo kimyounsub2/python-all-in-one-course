@@ -1,6 +1,6 @@
 print("Welcome to the tip calculator!")
 
-total_bill = float(input("what was the total bill? 원"))
+total_bill = float(input("what was the total bill? "))
 
 percent = int(input("what percentage tip would you like to give? 10, 12, or 15? 12"))
 

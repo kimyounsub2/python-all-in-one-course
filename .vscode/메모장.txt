@@ -10,3 +10,36 @@ Ctrl + / 전체 주석
 소숫점 float
 반올림 round - print(round(2.66)) =3
 반버림 //    - print(8//3)
+소문자 변환 lower
+하나의 항목을 리스트의 마지막에 추가한다 append
+
+부등호
+== 와 같은
+!= 와 같지않음
+
+랜덤모듈
+1. random.random()
+random.random() 함수는 0.0에서부터 1.0 사이의 실수(float)를 반환합니다. [0.0, 1.0) 
+정확한 범위는 1.0을 포함하지 않는 범위 입니다. (0.0 <= x < 1.0)
+x = random.random()
+print(x)    # 0.00000~0.999999...
+
+2. random.uniform(a, b)
+random.uniform 함수는 인자로 들어온 a~b 사이의 실수(float)를 반환합니다.
+uniform 함수의 랜덤 범위는 a <= x <= b 입니다.
+x = random.random(10, 20)
+print(x)    # 10.00000 <= x <= 20.00000
+
+3. randint(a, b)
+randint 함수는 인자로 들어온 a, b 사이의 랜덤한 정수(int)를 반환합니다.
+반환하는 x는  a, b를 포함한 범위 입니다. (a <= N <= b)
+randrange 함수에 a, b+1을 넣은것과 동일하게 동작합니다.
+x = random.randint(10, 20)
+print(x)    # 10 <= x <= 20
+
+6. random.sample(seq or set, N)
+첫번째 매개 변수로 시퀀스 데이터 타입(튜플, 문자열, range, 리스트) 또는 set 타입을 받을 수 있습니다.
+
+
+
+
