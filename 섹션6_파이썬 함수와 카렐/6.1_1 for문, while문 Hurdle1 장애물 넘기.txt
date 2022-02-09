@@ -1,0 +1,39 @@
+사이트 참조 Hurdle1
+https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json
+
+이렇게 하면 하나씩 코드를 작성하지 않아도 one_sicle()입력시 def one_sicle():에 입력된 코드가 전체 실행된다
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+def one_sicle():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+   
+#######################################   
+한 싸이클 코드를 6개 입력하면 6번 돈다
+one_sicle()
+one_sicle()
+one_sicle()
+one_sicle()
+one_sicle()
+one_sicle()
+one_sicle()
+########################################
+for문을 이용해서 작성할수 있다.
+for sicle in range(6):
+    one_sicle()
+#######################
+while문을 이용해서 작성 
+number_of_hurdles = 6
+while number_of_hurdles > 0:
+    one_sicle()
+    number_of_hurdles -= 1  # 허들 수가 0이 될때 닫힌다
+    print(number_of_hurdles)

@@ -1,4 +1,4 @@
-git add .
+git add -A
 git commit -m "second commit"
 git pull origin main
 git push origin main
@@ -12,6 +12,8 @@ Ctrl + / 전체 주석
 반버림 //    - print(8//3)
 소문자 변환 lower
 하나의 항목을 리스트의 마지막에 추가한다 append
+최댓값 max
+최솟값 min
 
 부등호
 == 와 같은
