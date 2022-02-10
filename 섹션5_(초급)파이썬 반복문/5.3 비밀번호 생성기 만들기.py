@@ -20,13 +20,13 @@ password = ""
 
 # 이렇게 줄일수 있다 
 for char in range(1, nr_letters +1):
-    password += str(random.choices(letters))
+    password += random.choice(letters)
     
 for char in range(1, nr_symbols+1):
-    password += str(random.choices(numbers) )
+    password += random.choice(numbers)
     
 for char in range(1, nr_numbers+1):
-    password += str(random.choices(symbols))
+    password += random.choice(symbols)
 print(password)
 
 
