@@ -1,4 +1,5 @@
-#from replit import clear 이거 어찌하는거야 모듈인거 같은데
+# from replit import clear #이거 어찌하는거야 모듈인거 같은데
+from turtle import clear
 from art import logo
 print(logo)
 
@@ -27,5 +28,5 @@ while not bidding_finished:
     if should_contiue == "no":
         bidding_finished = True
         find_highest_bidder(bids)
-    else:
-        print()
+    elif should_contiue == "yes":
+        clear()
