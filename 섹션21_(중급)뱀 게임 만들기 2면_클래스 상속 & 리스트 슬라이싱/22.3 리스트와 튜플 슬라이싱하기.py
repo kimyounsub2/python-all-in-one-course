@@ -50,5 +50,4 @@ while game_is_on:
 # 머리가 꼬리의 아무 세그먼트와 충돌하면 게임이 끝난것이므로 게임종료 절차진행
 
 
-
 screen.exitonclick()

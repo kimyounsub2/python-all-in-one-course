@@ -7,6 +7,8 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
+
+# 오류건찾아보자... 
 class Snake:
     # Snake 클래스 안에 있는 시작 위치를 사용해서 뱀을 새로 만들수 이싸.
     def __init__(self):
