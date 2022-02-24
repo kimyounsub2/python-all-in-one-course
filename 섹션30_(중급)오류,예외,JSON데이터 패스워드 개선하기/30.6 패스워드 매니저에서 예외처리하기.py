@@ -39,18 +39,23 @@ def save():
         messagebox.showinfo(title="Oops", message="Please make sure you haven't left any fields empty.")
     # data.txt가 아닌 data.json을 사용하여 파일을 생성한다.
     else:
-        with open("data.json", "w") as data_file:
-            # json에서 쓰기로 쓰기 위해 w
-            json.dump(new_data, data_file, indent=4) # indent모든 JSON데이터에 들여쓰기를 할 공백을 제공해서 휠씬 읽기 쉽게하기위해
+        try:
+            with open("data.json", "r") as data_file:
+                # 전에 있는 데이타 파일을 읽는다.
+                 data = json.load(data_file) 
+        except FileExistsError:
+            with open("data.json", "w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+                
+        else:
+            # 전에 있는 데이터와 함게 새로운 데이터를 업데이트 해준다
+            data.update(new_data)
             
-            # json에서 읽기로 쓰기 위해 r
-            # data = json.load(data_file)
-            # print(data)
+            with open("data.json", "w") as data_file:
+                # 업데이트 데이터를 저장한다.
+                json.dump(data, data_file, indent = 4)
             
-            # json 데이터를 업데이트 하기위해
-            # data = json.load(data_file)
-            # data.update(new_data)
-            
+        finally:
             website_entry.delete(0, END)
             password_entry.delete(0, END)
 

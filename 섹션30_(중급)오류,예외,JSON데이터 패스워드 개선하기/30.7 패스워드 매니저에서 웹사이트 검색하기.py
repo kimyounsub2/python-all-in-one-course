@@ -1,3 +1,4 @@
+from distutils import command
 from tkinter import *
 from tkinter import messagebox
 from random import choice, randint, shuffle
@@ -39,22 +40,42 @@ def save():
         messagebox.showinfo(title="Oops", message="Please make sure you haven't left any fields empty.")
     # data.txt가 아닌 data.json을 사용하여 파일을 생성한다.
     else:
-        with open("data.json", "w") as data_file:
-            # json에서 쓰기로 쓰기 위해 w
-            json.dump(new_data, data_file, indent=4) # indent모든 JSON데이터에 들여쓰기를 할 공백을 제공해서 휠씬 읽기 쉽게하기위해
+        try:
+            with open("data.json", "r") as data_file:
+                # 전에 있는 데이타 파일을 읽는다.
+                 data = json.load(data_file) 
+        except FileExistsError:
+            with open("data.json", "w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+                
+        else:
+            # 전에 있는 데이터와 함게 새로운 데이터를 업데이트 해준다
+            data.update(new_data)
             
-            # json에서 읽기로 쓰기 위해 r
-            # data = json.load(data_file)
-            # print(data)
+            with open("data.json", "w") as data_file:
+                # 업데이트 데이터를 저장한다.
+                json.dump(data, data_file, indent = 4)
             
-            # json 데이터를 업데이트 하기위해
-            # data = json.load(data_file)
-            # data.update(new_data)
-            
+        finally:
             website_entry.delete(0, END)
             password_entry.delete(0, END)
-
-
+# ---------------------------- FIND PASSWORD ------------------------------- #            
+            
+def find_password():
+    website = website_entry.get()
+    try:
+        with open("data.json") as data_file:
+            data = json.load(data_file) 
+    except FileNotFoundError:
+        messagebox.showinfo(title= "Manger", message = "이메일이 없습니다.") # 이때는 처음 data.json파일이 없을때 FileNotFoundError가 나기 때문에 사용하고 
+    else:
+        if website in data:
+            email = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(title = website, message= f"email = {email} \npassword = {password}")
+        else:
+            messagebox.showinfo(title = "Manger", message= f"아이디가 없습니다.")
+            
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -75,18 +96,20 @@ password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
 #Entries
-website_entry = Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry = Entry(width=19)
+website_entry.grid(row=1, column=1)
 website_entry.focus()
 email_entry = Entry(width=35)
 email_entry.grid(row=2, column=1, columnspan=2)
 email_entry.insert(0, "angela@gmail.com")
-password_entry = Entry(width=21)
+password_entry = Entry(width=19)
 password_entry.grid(row=3, column=1)
 
 # Buttons
 generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(row=3, column=2)
+search_button = Button(text="Search",width=13 , command= find_password )
+search_button.grid(row=1, column=2,)
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
 
