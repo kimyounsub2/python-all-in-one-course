@@ -4,7 +4,7 @@ import smtplib
 my_email = "gpgp0330@gmail.com" # 자신의 이메일 입력
 # @앞에 있는 부분은 이메일 계정의 신원에 해당하고 @ 뒤에 있는 부분은 이메일 제공자의 신원에 해당한다.
 password = "rladbstjq2@"
-with smtplib.SMTP("smtp.gmail.com") as connection:
+with smtplib.SMTP("smtp.gmail.com") as connection: # 구글이나 야후나 이메일마다 조금씩 다르다
     connection.starttls() # 이메일 서버와의 연결을 안전하게 만드는 방식을 말한다.
     # 그렇게 하면 우리가 이메일을 전송할때 만일 다른 누군가가 그 과정의 어딘가에서 이메일을 가로채고 읽으려 한다면, 
     # 이 함수가(starttls) 작동할것이고 메시지가 암호화되어 메일의 내용을 알수 없게 한다.
