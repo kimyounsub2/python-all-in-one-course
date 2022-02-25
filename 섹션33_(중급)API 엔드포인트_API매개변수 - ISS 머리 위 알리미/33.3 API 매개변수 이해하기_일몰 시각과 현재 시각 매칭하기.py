@@ -20,14 +20,15 @@ reponse = requests.get("https://api.sunrise-sunset.org/json" ,params=parameters 
 reponse.raise_for_status()
 data = reponse.json()
 # 출력되는 내용에서 sunrise, sunset내용만 출력할수 있다.
-# sunrise = data["results"]["sunrise"]
-# sunset = data["results"]["sunset"]
+sunrise = data["results"]["sunrise"]
+sunset = data["results"]["sunset"]
 
-# print(sunrise)
-# print(sunrise.split("T")) # split("T")를 추가하면 2022-02-25T06:52:08+00:00 -> ['2022-02-25', '06:52:08+00:00']
-# print(sunrise.split("T")[1].split(":")) # [1].split(":")를 추가하면 ['2022-02-25', '06:52:08+00:00'] -> ['06', '52', '08+00', '00']
-# print(sunrise.split("T")[1].split(":")[0]) # [0]를 추가하면  ['06', '52', '08+00', '00'] 여기서 0번째 문자이 06만 출력된다.
+print(sunrise)
+print(sunrise.split("T")) # split("T")를 추가하면 2022-02-25T06:52:08+00:00 -> ['2022-02-25', '06:52:08+00:00']
+print(sunrise.split("T")[1].split(":")) # [1].split(":")를 추가하면 ['2022-02-25', '06:52:08+00:00'] -> ['06', '52', '08+00', '00']
+print(sunrise.split("T")[1].split(":")[0]) # [0]를 추가하면  ['06', '52', '08+00', '00'] 여기서 0번째 문자이 06만 출력된다.
 
+########### 이렇게 해서 원하는 마지막 시간을 출력할수 있다.
 sunrise = data["results"]["sunrise"].split("T")[1].split(":")[0]
 sunset = data["results"]["sunset"].split("T")[1].split(":")[0]
 print(sunrise)
