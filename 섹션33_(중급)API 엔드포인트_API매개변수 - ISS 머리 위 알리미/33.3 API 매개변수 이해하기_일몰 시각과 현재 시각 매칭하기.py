@@ -34,4 +34,6 @@ sunset = data["results"]["sunset"].split("T")[1].split(":")[0]
 print(sunrise)
 print(sunset)
 
+# 오류건 테슽
+
 time_now = datetime.now()
