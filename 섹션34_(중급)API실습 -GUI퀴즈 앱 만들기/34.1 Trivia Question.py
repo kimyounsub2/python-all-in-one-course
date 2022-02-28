@@ -12,10 +12,10 @@ for question in question_data:
 
 
 quiz = QuizBrain(question_bank)
-quiz_ui = QuizInterface()
+quiz_ui = QuizInterface(quiz)
 
 # while quiz.still_has_questions():
-#     quiz.next_question()
+# quiz.next_question()
 
 print("You've completed the quiz")
 print(f"Your final score was: {quiz.score}/{quiz.question_number}")
@@ -25,4 +25,3 @@ print(f"Your final score was: {quiz.score}/{quiz.question_number}")
 # 예를 들어  &quot;가 "(큰 따음표)라는것을 볼수가 있다. < -> &lt; 등등
 # 우리가 실제로 보고 있는 건 HTML 개체라는 것인데 그리고 HTML에 있는 특정한 문자들을 교체하는 방법이 있다.
 # Freeformatter라는 툴을 이용해서 우리가 API로부터 받는 HTML결과를 언이스케이핑(Unescape)해서 사람이 읽을수 있는 원래 형식으로 형식화 할수 있다.
-# 

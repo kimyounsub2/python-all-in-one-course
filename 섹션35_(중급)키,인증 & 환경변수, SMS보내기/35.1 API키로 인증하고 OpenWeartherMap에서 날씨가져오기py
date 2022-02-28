@@ -1,0 +1,17 @@
+############## 강의내용 복붙
+from urllib import response
+import requests
+
+OWM_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"# API 문서에 제시된 엔드포인트이다. 물음표를 제외하고 그 앞에 있는 모든것이 된다.
+
+# API키를 잡아야 한다. appid
+api_ked ="69f04e4613056b159c2761a9d9e664d2" # OpenWeatherMap에 등록해서 자신만의 키를 가져오기
+
+weather_params = {
+    "Lat": 51.507351,  #위도 런던의 위도 사이트에서 조회
+    "Lon": -0.127758, # 경도
+    "appid" : api_ked,
+}
+
+response = requests.get(OWM_Endpoint, params=weather_params) # 여기다 추가로 약간의 매개변수를 제공 우리가 받는 데이터의 종류를 결정한다. 특정한 장소의 날씨가 될것이다.
+print(response.json())

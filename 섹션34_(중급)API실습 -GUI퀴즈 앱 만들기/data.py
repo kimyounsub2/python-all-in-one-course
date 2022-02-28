@@ -4,7 +4,8 @@ import requests
 # 아래 사이트에서 "amount": 10, "type": "boolean" 내용가져옴
 parameters = {
     "amount": 10,
-    "type": "boolean"
+    "type": "boolean",
+    "category": 18, # 해당 사이트의 질문을 변경할수 있다.
     
 }
 
@@ -14,6 +15,7 @@ data = response.json()
 question_data = data["results"]
 ########## 저번에 아래의 data를 직접 가져와서 코딩 하였지만
 #"https://opentdb.com/api.php 홈페이지의 데이터를 가지고 와서 아래의 data와 똑같은 내용의 question_data를 불러온것이다.
+
 
 
 # question_data = [
