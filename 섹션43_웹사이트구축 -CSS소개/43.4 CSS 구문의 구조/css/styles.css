@@ -1,0 +1,39 @@
+h1 { 
+    color: wheat; 
+    font-size: 200px;
+}
+
+/* CSS 주석달기 방법 
+아래의 방법은 이미지를 전채 변경해주는 방법
+img {
+    background-color: aqua;
+    width: 100px;
+}
+
+*/
+img:hover {
+    background-color: gold;
+    width: 100px;
+}
+
+img {
+    width: 100px;
+}
+
+
+/* 해당이미지 별로 따로 변경해주는 방법 이미 사진마다 class를 생성하여 */
+.bacon{
+    background-color: blueviolet;
+}
+.아스날{
+    background-color: aqua;
+}
+
+.circular{
+        border-radius: 100%;
+}
+
+/* hi의 제목만 변경하기 이미 id를 생성하여 */
+#heading{
+    color: blue;
+}

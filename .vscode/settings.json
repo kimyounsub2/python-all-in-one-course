@@ -1,7 +1,0 @@
-{
-    "python.testing.pytestArgs": [
-        "섹션1_파이썬 변수를 사용한 데이터 관리"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
-}
