@@ -1,5 +1,5 @@
 body{
-    color: #40514E;
+    color: #4fc24f;
     margin: 0;
     text-align: center;
     font-family: 'Nanum Myeongjo', serif;
@@ -22,18 +22,12 @@ h2{
     font-size: 2.5rem; /*40px를 사용할려면 40 /16=2.5rem*/
     color: #66BFBF;
     font-weight: normal;
+    padding-bottom: 100px;
 }
 
 h3{
     font-family: 'Nanum Myeongjo', serif;
     color: #11999E;
-}
-
-hr{
-    border: dotted #EAF6F6 6px;
-    border-bottom: none;
-    width: 4%;
-    margin: 100px auto;
 }
 
 .top-container{
@@ -43,14 +37,22 @@ hr{
     color: #66BFBF;
 }
 
-.middle-container{
+.intro{
+    width: 30%;
+    margin: auto;
+}
 
+.middle-container{
+    margin: 100px auto;
 }
 
 .bottom-container{
     color: #11999E;
-    background-color: #66BFBF;
-    padding: 50px 0 20px;
+
+}
+
+p{
+    line-height: 10;
 }
 
 .skill-row{
@@ -96,45 +98,4 @@ hr{
     bottom: 300px;
 }
 
-.btn {
-    size: 5px;
-    background: #3DF69B;
-    background-image: -webkit-linear-gradient(top, #3DF69B, #341ED0);
-    background-image: -moz-linear-gradient(top, #3DF69B, #341ED0);
-    background-image: -ms-linear-gradient(top, #3DF69B, #341ED0);
-    background-image: -o-linear-gradient(top, #3DF69B, #341ED0);
-    background-image: -webkit-gradient(to bottom, #3DF69B, #341ED0);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    color: #FFFFFF;
-    font-family: Arial;
-    font-size: 21px;
-    font-weight: 100;
-    padding: 40px;
-    -webkit-box-shadow: 1px 1px 20px 0 #000000;
-    -moz-box-shadow: 1px 1px 20px 0 #000000;
-    box-shadow: 1px 1px 20px 0 #000000;
-    text-shadow: 1px 1px 20px #000000;
-    border: solid #337FED 1px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
- }
- 
- .btn:hover {
-    border: solid #337FED 1px;
-    background: #1E62D0;
-    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
-    background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
-    background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
-    background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
-    background-image: -webkit-gradient(to bottom, #1E62D0, #3D94F6);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    text-decoration: none;
- }
-
- 
+<!--
