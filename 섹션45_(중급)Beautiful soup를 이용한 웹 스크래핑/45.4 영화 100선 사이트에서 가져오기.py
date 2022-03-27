@@ -6,7 +6,7 @@ website_html = response.text
 
 soup = BeautifulSoup(website_html,"html.parser")
 print(soup.title)
-all_movie = soup.find_all(name="h3", class_="jsx-4245974604") # 아니 강의에서는 class가 title로 나온는데
+all_movie = soup.find_all(name="h3", class_="97) Amelie") # 아니 강의에서는 class가 title로 나온는데
 print(all_movie)
 
 movie_title = [movie.getText() for movie in all_movie]
