@@ -8,7 +8,7 @@ from selenium import webdriver
 
 ############ 파이썬 사이트에서 여러가지 메소드 사용해서 출력하기
 
-driver = webdriver.Chrome(executable_path= 'C:/Users/김윤섭/Downloads/chromedriver_win32/chromedriver')
+driver = webdriver.Chrome(executable_path= 'C:/chromedriver_win32/chromedriver')
 driver.get("https://www.python.org/")
 # name으로 해당 요소 찾기
 # search_bar = driver.find_element_by_name("q")

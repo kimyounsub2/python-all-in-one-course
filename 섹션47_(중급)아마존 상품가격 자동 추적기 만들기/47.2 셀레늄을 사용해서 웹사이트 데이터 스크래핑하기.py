@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-driver = webdriver.Chrome(executable_path= 'C:/Users/김윤섭/Downloads/chromedriver_win32/chromedriver')
+driver = webdriver.Chrome(executable_path= 'C:/chromedriver_win32/chromedriver')
 driver.get("https://www.python.org/")
 
 event_time = driver.find_elements_by_css_selector(".event-widget time")
