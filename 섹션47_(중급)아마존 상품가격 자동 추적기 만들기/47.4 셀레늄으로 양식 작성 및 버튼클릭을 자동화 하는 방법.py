@@ -9,6 +9,7 @@ driver.get("https://en.wikipedia.org/wiki/Main_Page")
 article_count = driver.find_element_by_css_selector("#articlecount a")
 #article_count.click() # 해당링크를 클릭해주는 기능이다.
 
+
 all_portals = driver.find_element_by_link_text("All portals") 
 # all_portals.click() 해당 사이트의 All portals를 클릭한다.
 
