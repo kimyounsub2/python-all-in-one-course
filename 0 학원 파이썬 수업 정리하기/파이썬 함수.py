@@ -263,7 +263,7 @@ print(a)
 # 함수 안에서 함수 밖의 변수를 변경하는 방법 1
 a = 1
 def vartest(a):
-    global a
+    # global a
     a = a + 1
 vartest(a)
 print(a)
